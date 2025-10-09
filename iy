@@ -10490,6 +10490,32 @@ addcmd('unloopgoto',{'noloopgoto'},function(args, speaker)
 	loopgoto = nil
 end)
 
+addcmd('sing', {'song'}, function(args, speaker)
+    local lyrics = {
+        "Tick-tock",
+        "Heavy like a Brink's truck",
+        "Looking like I'm tip-top",
+        "Shining like a wristwatch",
+        "Time will grab your wrist",
+        "Lock it down 'til the thing pop",
+        "Can you stick around for a minute 'til the ring stop?",
+        "Please, God",
+        "Tick-tock",
+        "Heavy like a Brink's truck",
+        "Looking like I'm tip-top",
+        "Shining like a wristwatch",
+        "Time will grab your wrist",
+        "Lock it down 'til the thing pop",
+        "Can you stick around for a minute 'til the ring stop?",
+        "Please, God (Please, God)"
+    }
+
+    for _, line in ipairs(lyrics) do
+        chatMessage(line)
+        wait(1.5) -- Adjust delay (in seconds) to control "singing" speed
+    end
+end)
+
 addcmd('headsit',{},function(args, speaker)
 	local players = getPlayer(args[1], speaker)
 	if headSit then headSit:Disconnect() end
