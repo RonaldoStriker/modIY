@@ -10554,7 +10554,7 @@ addcmd('sing', {'song'}, function(args, speaker)
 
     for _, line in ipairs(lyrics) do
         chatMessage(line)
-        wait(1.5) -- Adjust delay (in seconds) to control "singing" speed
+        wait(2.1) -- Adjust delay (in seconds) to control "singing" speed
     end
 end)
 
